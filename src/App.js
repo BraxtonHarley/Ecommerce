@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { commerce } from './lib/commerce';
 import { Products, Navbar } from './components';
 
-
 const App = () => {
     const [ products, setProducts ] = useState([]);
 
@@ -16,12 +15,10 @@ const App = () => {
         fetchProducts();
     }, []);
 
-    console.log(products);
-
     return (
         <div>
             <Navbar />
-            <Products /> 
+            <Products products={products} /> 
         </div>
     )
 }
