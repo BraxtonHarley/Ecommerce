@@ -17,22 +17,22 @@ const Navbar = ({ totalItems }) => {
             <AppBar postion="fixed" className={classes.appBar} color="inherit">
                 <Toolbar>
                     <Typography component={ Link } to='/' variant='h4' className={classes.title} color='inherit'>
-                        <img src={logo} alt="Commerce.js" height='75px' className={classes.image} />
+                        <img src={logo} alt="Specialty Coffee Co." height='75px' className={classes.image} />
                         Specialty Coffee Co.
                     </Typography>
                     <div className={classes.grow} />
-
-                    <Typography component={ Link } to='/' variant='h6'  className={classes.title} color='inherit'>
+{/* 
+                    <Typography component={ Link } underline='hover' to='/' variant='h6'  className={classes.title} color='inherit'>
                         Home
                     </Typography>
 
-                    <Typography component={ Link } to='/' variant='h6' className={classes.title} color='inherit'>
+                    <Typography component={ Link } to='/about' variant='h6' className={classes.title} color='inherit'>
                        About
                     </Typography>
 
                     <Typography component={ Link } to='/products' variant='h6' className={classes.title} color='inherit'>
                        Products
-                    </Typography>
+                    </Typography> */}
 
                     {location.pathname === '/' && (
 
