@@ -21,6 +21,19 @@ const Navbar = ({ totalItems }) => {
                         Specialty Coffee Co.
                     </Typography>
                     <div className={classes.grow} />
+
+                    <Typography component={ Link } to='/' variant='h6'  className={classes.title} color='inherit'>
+                        Home
+                    </Typography>
+
+                    <Typography component={ Link } to='/' variant='h6' className={classes.title} color='inherit'>
+                       About
+                    </Typography>
+
+                    <Typography component={ Link } to='/products' variant='h6' className={classes.title} color='inherit'>
+                       Products
+                    </Typography>
+
                     {location.pathname === '/' && (
 
                         <div className={classes.button}>
