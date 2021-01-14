@@ -29,7 +29,7 @@ const Home = () => (
         .
       </p>
 
-      <Carousel>
+      {/* <Carousel>
         <Carousel.Item interval={4000}>
           <img
             className="d-block w-100"
@@ -67,7 +67,7 @@ const Home = () => (
             </p>
           </Carousel.Caption>
         </Carousel.Item>
-      </Carousel>
+      </Carousel> */}
 
       <br />
 

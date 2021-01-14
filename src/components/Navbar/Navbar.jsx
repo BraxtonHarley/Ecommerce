@@ -21,8 +21,8 @@ const Navbar = ({ totalItems }) => {
                         Specialty Coffee Co.
                     </Typography>
                     <div className={classes.grow} />
-{/* 
-                    <Typography component={ Link } underline='hover' to='/' variant='h6'  className={classes.title} color='inherit'>
+
+                    {/* <Typography component={ Link } underline='hover' to='/' variant='h6'  className={classes.title} color='inherit'>
                         Home
                     </Typography>
 
@@ -34,7 +34,7 @@ const Navbar = ({ totalItems }) => {
                        Products
                     </Typography> */}
 
-                    {location.pathname === '/' && (
+                    {location.pathname === '/', '/about', '/products' && (
 
                         <div className={classes.button}>
                             <IconButton component={ Link } to='/cart' aria-label='Show Cart Items' color='inherit'>
