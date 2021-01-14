@@ -31,6 +31,8 @@ const App = () => {
          setCart(cart)
     }
 
+    // const refreshCart = async () 
+
     const handleRemoveFromCart = async (productId) => {
         const { cart } = await commerce.cart.remove(productId)
 

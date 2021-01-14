@@ -16,6 +16,9 @@ const Cart = ({ cart, handleUpdateCartQty, handleEmptyCart, handleRemoveFromCart
          </Typography>
     );
 
+    commerce.cart.refresh()
+
+
     const FilledCart = () => (
         <>
             <Grid container spacing={3} >
