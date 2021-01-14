@@ -31,7 +31,11 @@ const App = () => {
          setCart(cart)
     }
 
-    // const refreshCart = async () 
+    // const refreshCart = async (productId, quantity) => {
+    //     const { cart } = await commerce.cart.refresh(productId, {quantity});
+
+    //     setCart(cart)
+    // } 
 
     const handleRemoveFromCart = async (productId) => {
         const { cart } = await commerce.cart.remove(productId)
@@ -84,6 +88,7 @@ const App = () => {
                     <Route exact path='/cart'>
                         <Cart 
                             cart={cart} 
+                            refreshCart={refreshCart}
                             handleRemoveFromCart={handleRemoveFromCart}
                             handleEmptyCart={handleEmptyCart}
                             handleUpdateCartQty={handleUpdateCartQty}

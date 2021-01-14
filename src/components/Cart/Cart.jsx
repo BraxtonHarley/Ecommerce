@@ -4,7 +4,7 @@ import useStyles from './styles';
 import CartItem from './CartItem/CartItem';
 import { Link } from 'react-router-dom';
  
-const Cart = ({ cart, handleUpdateCartQty, handleEmptyCart, handleRemoveFromCart }) => {
+const Cart = ({ cart, handleUpdateCartQty, handleEmptyCart, handleRemoveFromCart, refreshCart }) => {
     const classes = useStyles();
 
 
@@ -16,15 +16,12 @@ const Cart = ({ cart, handleUpdateCartQty, handleEmptyCart, handleRemoveFromCart
          </Typography>
     );
 
-    commerce.cart.refresh()
-
-
     const FilledCart = () => (
         <>
             <Grid container spacing={3} >
                 { cart.line_items.map((item) => (
                     <Grid item xs={12} sm={4} key={item.id}>
-                       <CartItem item={item} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} />
+                       <CartItem item={item} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} onRefreshCart={refreshCart} />
                     </Grid>
                 )) }
             </Grid>
