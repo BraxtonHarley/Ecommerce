@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Paper, Stepper, Step, StepLabel, Typography, CircularProgress, Divider, Button } from '@material-ui/core'; 
+import { Paper, Stepper, Step, StepLabel, Typography } from '@material-ui/core'; 
 import useStyles from './styles';
 import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
@@ -8,8 +8,10 @@ import { commerce } from '../../../lib/commerce';
 
 const steps =  ['Shipping address', 'Payment details' ];
 
-const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
+const Checkout = ({ cart }) => {
     const classes = useStyles();
+    
+
     const [activeStep,  setActiveStep] = useState(0); 
     const [shippingData, setShippingData] = useState({});
     const [checkoutToken, setCheckoutToken] = useState(null);
@@ -49,7 +51,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
             checkoutToken={checkoutToken} 
             nextStep={nextStep} 
             backStep={backStep} 
-            onCaptureCheckout={onCaptureCheckout} /> 
+             /> 
 
     return (
         <>
@@ -64,6 +66,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
                             </Step>
                         )) }
                     </Stepper>
+                    
                     {activeStep === steps.length ? <Confirmation /> : checkoutToken && <Form /> }
                 </Paper>
             </main>

@@ -1,8 +1,9 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '@material-ui/core';
-import { ShoppingCart } from '@material-ui/icons';
-import useStyles from './styles';
 import { Link, useLocation } from 'react-router-dom'; 
+import { AppBar, Toolbar, IconButton, Badge, Typography } from '@material-ui/core';
+import { ShoppingCart } from '@material-ui/icons';
+
+import useStyles from './styles';
 
 import logo from '../../assets/logo.png';
 
@@ -17,22 +18,13 @@ const Navbar = ({ totalItems }) => {
             <AppBar postion="fixed" className={classes.appBar} color="inherit">
                 <Toolbar>
                     <Typography component={ Link } to='/' variant='h4' className={classes.title} color='inherit'>
+                       
                         <img src={logo} alt="Specialty Coffee Co." height='75px' className={classes.image} />
+                       
                         Specialty Coffee Co.
                     </Typography>
+                   
                     <div className={classes.grow} />
-
-                    {/* <Typography component={ Link } underline='hover' to='/' variant='h6'  className={classes.title} color='inherit'>
-                        Home
-                    </Typography>
-
-                    <Typography component={ Link } to='/about' variant='h6' className={classes.title} color='inherit'>
-                       About
-                    </Typography>
-
-                    <Typography component={ Link } to='/products' variant='h6' className={classes.title} color='inherit'>
-                       Products
-                    </Typography> */}
 
                     {location.pathname === '/', '/about', '/products' && (
 

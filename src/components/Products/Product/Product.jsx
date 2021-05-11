@@ -9,19 +9,28 @@ const Product = ({ product, onAddToCart }) => {
 
     return (
        <Card className={classes.root}>
+           
+           {/* CARD IMAGE */}
            <CardMedia className={classes.media} image={product.media.source} title={product.name} />
+           
+
+        
+           {/* CARD CONTENT */}
            <CardContent>
                 <div className={classes.cardContent} >
                     <Typography variant="h5" gutterBottom >
                         {product.name}
                     </Typography>
+
                     <Typography variant="h5" >
-                        {product.price.formated_with_symbol}
+                        {product.price.formatted_with_symbol}
                     </Typography>
                </div>
-               <Typography dangerouslySetInnerHTML={{ __html: product.description }} variant="body2" color="textSecondary" />
+               <Typography className={classes.cardDescription} dangerouslySetInnerHTML={{ __html: product.description }} variant="body2" color="textSecondary" />
            </CardContent>
            
+
+            {/* CARD BUTTONS */}
            <CardActions disableSpacing className={classes.cardActions} >
                <IconButton aria-label="Add To Cart" onClick={() => onAddToCart(product.id, 1)} >
                    <AddShoppingCart />

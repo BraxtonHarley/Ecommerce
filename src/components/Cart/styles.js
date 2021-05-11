@@ -1,4 +1,3 @@
-import { colors } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
@@ -9,6 +8,8 @@ export default makeStyles((theme) => ({
 
     
   },
+  
+  
   emptyButton: {
     minWidth: '150px',
     [theme.breakpoints.down('xs')]: {
@@ -18,12 +19,15 @@ export default makeStyles((theme) => ({
       marginRight: '20px',
     },
   },
+  
   checkoutButton: {
     minWidth: '150px',
   },
+  
   link: {
     textDecoration: 'none',
   },
+  
   cardDetails: {
     display: 'flex',
     marginTop: '5%',
